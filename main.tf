@@ -14,7 +14,7 @@ resource "azurerm_app_service_plan" "appser" {
   location = azurerm_resource_group.project2.location
   resource_group_name = azurerm_resource_group.project2.name
   kind = "Linux"
-  reserved = false  
+  reserved = true  
   sku {
     tier = "Basic"
     size = "B1"
