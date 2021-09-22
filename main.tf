@@ -14,7 +14,7 @@ resource "azurerm_app_service_plan" "appser" {
   location = azurerm_resource_group.project2.location
   resource_group_name = azurerm_resource_group.project2.name
   kind = "Linux"
-  reserved = True  
+  reserved = false  
   sku {
     tier = "Basic"
     size = "B1"
@@ -24,7 +24,7 @@ resource "azurerm_app_service_plan" "appser" {
 
 
 resource "azurerm_app_service" "appser" {
-  name                = "ajipto2012"
+  name                = "ajilab22"
   resource_group_name      = azurerm_resource_group.project2.name
   location                 = azurerm_resource_group.project2.location
   app_service_plan_id = azurerm_app_service_plan.appser.id
